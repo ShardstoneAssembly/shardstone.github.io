@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ShardstoneAssembly/shardstone
+  repo: ShardstoneAssembly/shardstone.github.io
   branch: main
   base_url: https://sveltia-auth.redshardstone.workers.dev
   auth_endpoint: /auth
