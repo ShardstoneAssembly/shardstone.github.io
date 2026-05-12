@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: ShardstoneAssembly/shardstone # Replace with your actual GitHub username and repository name
+  branch: main
+  base_url: https://sveltia-auth.redshardstone.workers.dev
+  auth_endpoint: /auth
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Projects"
+    folder: "content/portfolio"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "body", widget: "markdown" }
