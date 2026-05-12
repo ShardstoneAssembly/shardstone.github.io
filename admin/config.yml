@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ShardstoneAssembly/shardstone # Replace with your actual GitHub username and repository name
+  repo: ShardstoneAssembly/shardstone
   branch: main
   base_url: https://sveltia-auth.redshardstone.workers.dev
   auth_endpoint: /auth
