@@ -11,13 +11,16 @@
   "text_color": "",
   "gallery": [
     {
-      "image": "/assets/images/insidebook.jpg"
+      "image": "/assets/images/insidea.jpg"
     },
     {
-      "image": "/assets/images/page1.jpg"
+      "image": "/assets/images/insideb.jpg"
     },
     {
-      "image": "/assets/images/page2627.jpg"
+      "image": "/assets/images/insidec.jpg"
+    },
+    {
+      "image": "/assets/images/insided.jpg"
     }
   ],
   "extra_products": [
