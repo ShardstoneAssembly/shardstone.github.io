@@ -55,7 +55,17 @@
           "url": "https://shardstone.itch.io/crimsoncatalyst"
         }
       ],
-      "gallery": []
+      "gallery": [
+        {
+          "image": "/assets/images/VaxFo7.jpg"
+        },
+        {
+          "image": "/assets/images/FEAA93.jpg"
+        },
+        {
+          "image": "/assets/images/grIHOY.jpg"
+        }
+      ]
     }
   ],
   "buy_url": "https://shardstone.itch.io/scavenger",
