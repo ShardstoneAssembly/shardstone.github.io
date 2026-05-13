@@ -52,6 +52,7 @@ collections:
                   - { label: "Discord", value: "discord" }
                   - { label: "Itch.io", value: "itchio" }
                   - { label: "Twitter / X", value: "twitter" }
+                  - { label: "Link (chain icon)", value: "link" }
               - { label: "URL", name: "url", widget: "string" }
 
   # ─── PRODUCT PAGES ───────────────────────────────────────────────────────────
