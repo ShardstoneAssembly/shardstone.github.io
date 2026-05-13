@@ -1,14 +1,42 @@
 {
   "nav_items": [
-    { "label": "Scavenger", "url": "/scavenger/" },
-    { "label": "Skullbox", "url": "/skullbox/" },
-    { "label": "About", "url": "/about/" },
-    { "label": "Journal", "url": "/journal/" }
+    {
+      "label": "Scavenger",
+      "url": "/scavenger/"
+    },
+    {
+      "label": "Skullbox",
+      "url": "/skullbox/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Journal",
+      "url": "/journal/"
+    }
   ],
   "social_links": [
-    { "platform": "instagram", "url": "https://instagram.com/shardstonegames" },
-    { "platform": "youtube", "url": "https://youtube.com/@shardstonegames" },
-    { "platform": "discord", "url": "https://discord.gg/shardstone" },
-    { "platform": "itchio", "url": "https://shardstone.itch.io" }
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/shardstoneassembly/"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://www.youtube.com/channel/UCsYh0GtP18gA6Y5r-jftYlQ"
+    },
+    {
+      "platform": "discord",
+      "url": "https://discord.gg/2Cdj9EudsU"
+    },
+    {
+      "platform": "itchio",
+      "url": "https://shardstone.itch.io/"
+    },
+    {
+      "platform": "link",
+      "url": "https://www.drivethrurpg.com/browse/pub/11676/Shardstone-Assembly"
+    }
   ]
 }
