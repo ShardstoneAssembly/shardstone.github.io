@@ -9,7 +9,7 @@ title: Scavenger — Shardstone Assembly
     {% if scavenger.title_logo %}
       <img src="{{ scavenger.title_logo }}" alt="{{ scavenger.title }}" class="product-title-logo">
     {% else %}
-      <h1 class="product-title">{{ scavenger.title }}</h1>
+      <h1 class="product-title" {% if scavenger.title_color %}style="color: {{ scavenger.title_color }}"{% endif %}>{{ scavenger.title }}</h1>
     {% endif %}
     {% if scavenger.subtitle %}
     <p class="product-subtitle">{{ scavenger.subtitle }}</p>
