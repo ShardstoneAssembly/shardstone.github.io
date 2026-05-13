@@ -74,6 +74,7 @@ collections:
           - { label: "Product Cover Image", name: "cover_image", widget: "image" }
           - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false, hint: "Optional — URL to open when clicking the cover image (e.g. your itch.io page)" }
           - { label: "Description", name: "description", widget: "markdown" }
+          - { label: "Description Text Color", name: "text_color", widget: "color", default: "#ffffff", required: false, hint: "Color of the description text. Default is white." }
           - label: "Buttons"
             name: "buttons"
             widget: "list"
@@ -126,6 +127,7 @@ collections:
           - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false, hint: "Optional — URL to open when clicking the cover image" }
           - { label: "Description", name: "description", widget: "markdown" }
           - label: "Buttons"
+          - { label: "Description Text Color", name: "text_color", widget: "color", default: "#ffffff", required: false, hint: "Color of the description text. Default is white." }
             name: "buttons"
             widget: "list"
             hint: "Add up to 3 buttons. These replace the old single Buy Now button."
