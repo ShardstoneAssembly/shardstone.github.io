@@ -1,6 +1,7 @@
 {
   "hero_bg": "/assets/images/skullwall2.jpg",
   "title": "Sküllbox",
+  "title_color": "",
   "title_logo": "/assets/images/skullboxlogo-1.png",
   "subtitle": "Dungeons · Mayhem · Magyk",
   "eyebrow": "Rules-Lite Zine · 6-sided Dice Only",
@@ -23,8 +24,11 @@
     },
     {
       "image": "/assets/images/spread4.jpg"
+    },
+    {
+      "image": "/assets/images/spread3.jpg"
     }
   ],
-  "buy_url": "https://shardstone.itch.io/skullbox",
-  "buy_text": "Buy Now"
+  "buy_text": "Buy Now",
+  "buy_url": "https://shardstone.itch.io/skullbox"
 }
