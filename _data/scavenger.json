@@ -1,6 +1,7 @@
 {
   "hero_bg": "/assets/images/bg2.jpg",
   "title": "Scavenger",
+  "title_color": "",
   "title_logo": "/assets/images/scavlogo.png",
   "subtitle": "Nomads of Uncharted Worlds",
   "eyebrow": "Campaign Sourcebook · D&D 5E",
@@ -22,7 +23,7 @@
   "extra_products": [
     {
       "title": "Scavenger: Crimson Catalyst",
-      "title_logo": "",
+      "title_logo": "/assets/images/SCC_titlelogo.png",
       "eyebrow": "",
       "cover_image": "/assets/images/scavcrimsoncover.jpg",
       "cover_link": "",
@@ -46,7 +47,7 @@
       ]
     },
     {
-      "title": "Scavenger Quickstart",
+      "title": ".",
       "title_logo": "",
       "eyebrow": "",
       "cover_image": "/assets/images/quick_cover.jpg",
@@ -68,6 +69,6 @@
       ]
     }
   ],
-  "buy_url": "https://shardstone.itch.io/scavenger",
-  "buy_text": "Buy Now"
+  "buy_text": "Buy Now",
+  "buy_url": "https://shardstone.itch.io/scavenger"
 }
