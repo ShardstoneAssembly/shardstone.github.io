@@ -9,6 +9,12 @@
   "cover_link": "",
   "description": "**SCAVENGER: Nomads of Uncharted Worlds** is a beautifully illustrated art book and an original campaign setting for D&D 5E, set in a ravaged bronze age world where the only hope is an ancient gateway to other mysterious dimensions throughout the multiverse.\n\nExplorers, wanderers, treasure hunters, marauders — all of them are scavengers drawn to this old and alien world. Some seek knowledge, others salvation.\n\nIncludes new subclasses, a bestiary, adventure locations, magical items, feats, and a series of core rules changes designed to communicate the vibe of the setting.\n\n_Scavenger was successfully Kickstarted and supported by more than 1000 amazing backers._",
   "text_color": "",
+  "buttons": [
+    {
+      "text": "BUY NOW",
+      "url": "https://shardstone.itch.io/scavenger"
+    }
+  ],
   "gallery": [
     {
       "image": "/assets/images/insidea.jpg"
@@ -75,6 +81,6 @@
       ]
     }
   ],
-  "buy_text": "Buy Now",
-  "buy_url": "https://shardstone.itch.io/scavenger"
+  "buy_url": "https://shardstone.itch.io/scavenger",
+  "buy_text": "Buy Now"
 }
