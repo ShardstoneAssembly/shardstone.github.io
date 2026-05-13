@@ -19,6 +19,30 @@
       "image": "/assets/images/page2627.jpg"
     }
   ],
+  "extra_products": [
+    {
+      "title": "Scavenger Quickstart",
+      "title_logo": "",
+      "eyebrow": "",
+      "cover_image": "/assets/images/quick_cover.jpg",
+      "cover_link": "",
+      "description": "The **SCAVENGER Quickstart** is a brief and flavorful introduction to the Scavenger universe. Scavenger is a unique fantasy setting for 5th Edition where the namesake heroes are racing against time to either find a way to prevent their world's imminent extinction, called both the Great Dying and the Cataclysm. The scavengers must traverse an alien dimension of science fantasy, discover the secrets of the Zenith People that once dwelled there, and either find a way to escape their dying homeworld or otherwise stop the Great Dying in its tracks.\n\nThe SCAVENGER Quickstart details the world's themes, the unique magic found there, and the cultures of the Bronze Age civilization now facing utter annihilation.",
+      "buttons": [
+        {
+          "text": "Download",
+          "url": "https://shardstone.itch.io/scavenger-quickstart"
+        }
+      ],
+      "gallery": [
+        {
+          "image": "/assets/images/quick_pages1.jpg"
+        },
+        {
+          "image": "/assets/images/quick_pages2.jpg"
+        }
+      ]
+    }
+  ],
   "buy_url": "https://shardstone.itch.io/scavenger",
   "buy_text": "Buy Now"
 }
