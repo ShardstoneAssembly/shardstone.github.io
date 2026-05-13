@@ -68,6 +68,7 @@ collections:
         fields:
           - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen fixed background image for this page" }
           - { label: "Product Title (text)", name: "title", widget: "string", default: "Scavenger" }
+          - { label: "Title Text Color", name: "title_color", widget: "color", default: "#ffffff", required: false, hint: "Color of the big title text at the top of the page. Default is white." }
           - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false, hint: "Upload a logo image to replace the text title. Leave empty to use text." }
           - { label: "Subtitle", name: "subtitle", widget: "string", default: "Nomads of Uncharted Worlds" }
           - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the description", default: "Campaign Sourcebook · D&D 5E" }
@@ -120,6 +121,7 @@ collections:
         fields:
           - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen fixed background image for this page" }
           - { label: "Product Title (text)", name: "title", widget: "string", default: "Skullbox" }
+          - { label: "Title Text Color", name: "title_color", widget: "color", default: "#ffffff", required: false, hint: "Color of the big title text at the top of the page. Default is white." }
           - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false, hint: "Upload a logo image to replace the text title. Leave empty to use text." }
           - { label: "Subtitle", name: "subtitle", widget: "string", default: "Dungeons · Mayhem · Magyk" }
           - { label: "Eyebrow Text", name: "eyebrow", widget: "string", default: "Rules-Lite Zine · 6-sided Dice Only" }
