@@ -3,59 +3,103 @@ layout: base.njk
 title: Skullbox — Shardstone Assembly
 ---
 
-<main class="product-page">
+<main class="product-page" style="--hero-bg: url('{{ skullbox.hero_bg }}');">
 
-  <!-- Full-screen hero with background art -->
-  <section
-    class="product-hero"
-    style="{% if skullbox.hero_bg %}background-image: url('{{ skullbox.hero_bg }}');{% endif %}"
-  >
-    <div class="product-hero-content">
+  <header class="product-page-header">
+    {% if skullbox.title_logo %}
+      <img src="{{ skullbox.title_logo }}" alt="{{ skullbox.title }}" class="product-title-logo">
+    {% else %}
       <h1 class="product-title">{{ skullbox.title }}</h1>
-      {% if skullbox.subtitle %}
-      <p class="product-subtitle">{{ skullbox.subtitle }}</p>
-      {% endif %}
-    </div>
-  </section>
+    {% endif %}
+    {% if skullbox.subtitle %}
+    <p class="product-subtitle">{{ skullbox.subtitle }}</p>
+    {% endif %}
+  </header>
 
-  <!-- Description + cover image -->
-  <section class="product-content">
-    <div class="product-content-inner">
+  <div class="product-page-body">
 
-      <div class="product-text">
-        {% if skullbox.eyebrow %}
-        <p class="eyebrow">{{ skullbox.eyebrow }}</p>
-        {% endif %}
-        <div class="rich-text">
-          {{ skullbox.description | markdown | safe }}
+    <section class="product-entry">
+      <div class="product-entry-inner">
+        <div class="product-text">
+          {% if skullbox.eyebrow %}<p class="eyebrow">{{ skullbox.eyebrow }}</p>{% endif %}
+          <div class="rich-text">{{ skullbox.description | markdown | safe }}</div>
+          <div class="product-buttons">
+            {% if skullbox.buttons and skullbox.buttons.length %}
+              {% for btn in skullbox.buttons %}<a href="{{ btn.url }}" class="btn" target="_blank" rel="noopener noreferrer">{{ btn.text }}</a>{% endfor %}
+            {% elif skullbox.buy_url %}
+              <a href="{{ skullbox.buy_url }}" class="btn" target="_blank" rel="noopener noreferrer">{{ skullbox.buy_text if skullbox.buy_text else "Buy Now" }}</a>
+            {% endif %}
+          </div>
         </div>
-        {% if skullbox.buy_url %}
-        <a href="{{ skullbox.buy_url }}" class="btn" target="_blank" rel="noopener noreferrer">
-          {{ skullbox.buy_text if skullbox.buy_text else "Buy Now" }}
-        </a>
+        {% if skullbox.cover_image %}
+        <div class="product-cover">
+          {% if skullbox.cover_link %}<a href="{{ skullbox.cover_link }}" target="_blank" rel="noopener noreferrer">{% endif %}
+          <img src="{{ skullbox.cover_image }}" alt="{{ skullbox.title }}">
+          {% if skullbox.cover_link %}</a>{% endif %}
+        </div>
         {% endif %}
       </div>
+    </section>
 
-      {% if skullbox.cover_image %}
-      <div class="product-cover">
-        <img src="{{ skullbox.cover_image }}" alt="{{ skullbox.title }}">
+    {% if skullbox.gallery and skullbox.gallery.length %}
+    <section class="gallery">
+      <div class="gallery-grid">
+        {% for item in skullbox.gallery %}<div class="gallery-item"><img src="{{ item.image }}" alt="Screenshot" loading="lazy"></div>{% endfor %}
       </div>
+    </section>
+    {% endif %}
+
+    {% if skullbox.extra_products and skullbox.extra_products.length %}
+      {% for ep in skullbox.extra_products %}
+      <section class="product-entry product-entry--extra">
+        <div class="product-entry-divider">
+          {% if ep.title_logo %}<img src="{{ ep.title_logo }}" alt="{{ ep.title }}" class="product-title-logo product-title-logo--sm">
+          {% else %}<h2 class="product-entry-title">{{ ep.title }}</h2>{% endif %}
+        </div>
+        <div class="product-entry-inner">
+          <div class="product-text">
+            {% if ep.eyebrow %}<p class="eyebrow">{{ ep.eyebrow }}</p>{% endif %}
+            <div class="rich-text">{{ ep.description | markdown | safe }}</div>
+            <div class="product-buttons">
+              {% if ep.buttons and ep.buttons.length %}{% for btn in ep.buttons %}<a href="{{ btn.url }}" class="btn" target="_blank" rel="noopener noreferrer">{{ btn.text }}</a>{% endfor %}{% endif %}
+            </div>
+          </div>
+          {% if ep.cover_image %}
+          <div class="product-cover">
+            {% if ep.cover_link %}<a href="{{ ep.cover_link }}" target="_blank" rel="noopener noreferrer">{% endif %}
+            <img src="{{ ep.cover_image }}" alt="{{ ep.title }}">
+            {% if ep.cover_link %}</a>{% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </section>
+      {% if ep.gallery and ep.gallery.length %}
+      <section class="gallery">
+        <div class="gallery-grid">
+          {% for item in ep.gallery %}<div class="gallery-item"><img src="{{ item.image }}" alt="Screenshot" loading="lazy"></div>{% endfor %}
+        </div>
+      </section>
       {% endif %}
-
-    </div>
-  </section>
-
-  <!-- Screenshot gallery -->
-  {% if skullbox.gallery and skullbox.gallery.length %}
-  <section class="gallery">
-    <div class="gallery-grid">
-      {% for item in skullbox.gallery %}
-      <div class="gallery-item">
-        <img src="{{ item.image }}" alt="Skullbox screenshot">
-      </div>
       {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+    {% endif %}
 
+  </div>
 </main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img src="" alt="" id="lightbox-img">
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lightbox-img');
+  document.querySelectorAll('.gallery-item img').forEach(function(i){
+    i.addEventListener('click',function(){img.src=i.src;lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';});
+  });
+  function close(){lb.classList.remove('is-open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';setTimeout(function(){img.src='';},300);}
+  document.getElementById('lightbox-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
