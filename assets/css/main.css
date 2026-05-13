@@ -202,18 +202,23 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
 }
 
-/* Scrollable content body over fixed bg */
+/* Scrollable content body over fixed bg — transparent, no white band */
 .product-page-body {
-  background: rgba(232, 227, 219, 0.93);
+  background: transparent;
 }
 
-/* Individual product entry */
+/* Individual product entry — dark 40% transparent box */
 .product-entry {
-  padding: 52px var(--gutter);
-  border-bottom: 1px solid var(--border);
+  padding: 48px var(--gutter);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.product-entry--extra { border-top: 2px solid var(--border); }
+.product-entry--extra {
+  border-top: none;
+  margin-top: 16px;
+}
 
 .product-entry-divider {
   text-align: center;
@@ -263,10 +268,10 @@ a { color: inherit; text-decoration: none; }
   margin-top: 8px;
 }
 
-/* Gallery */
+/* Gallery — continues the dark transparent box */
 .gallery {
-  padding: 0 var(--gutter) 52px;
-  background: rgba(232, 227, 219, 0.93);
+  padding: 0 var(--gutter) 48px;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .gallery-grid {
@@ -363,6 +368,31 @@ a { color: inherit; text-decoration: none; }
 .btn:hover {
   background: var(--text);
   color: var(--bg);
+}
+
+/* Buttons inside product entries are on a dark bg — use white */
+.product-entry .btn {
+  color: #fff;
+  border-color: rgba(255,255,255,0.7);
+}
+.product-entry .btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Rich text inherits color from parent (set per-entry via CMS or default white) */
+.product-entry .rich-text {
+  color: inherit;
+}
+.product-entry .rich-text strong {
+  color: inherit;
+}
+.product-entry .rich-text a {
+  color: inherit;
+  border-bottom-color: rgba(255,255,255,0.35);
+}
+.product-entry .rich-text a:hover {
+  border-bottom-color: rgba(255,255,255,0.8);
 }
 
 
