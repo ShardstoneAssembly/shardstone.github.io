@@ -11,8 +11,16 @@
   "text_color": "",
   "buttons": [
     {
-      "text": "BUY NOW",
+      "text": "ITCH.IO",
       "url": "https://shardstone.itch.io/scavenger"
+    },
+    {
+      "text": "DriveTruRPG",
+      "url": "https://www.drivethrurpg.com/en/product/333647/scavenger-nomads-of-uncharted-worlds"
+    },
+    {
+      "text": "PRINTS",
+      "url": "https://www.inprnt.com/gallery/shardstone/"
     }
   ],
   "gallery": [
