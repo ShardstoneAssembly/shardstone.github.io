@@ -29,6 +29,30 @@
       "image": "/assets/images/spread3.jpg"
     }
   ],
+  "extra_products": [
+    {
+      "title": "Sküllbox: Halloween Tricks",
+      "title_logo": "",
+      "eyebrow": "",
+      "cover_image": "/assets/images/skullHalloweenCover .jpg",
+      "cover_link": "",
+      "description": "Halloween has come at last, and it’d be the best time of the year if it weren’t for those Everblissians and their darned sweet tooth! They’ve come to take our candy, and with Baba Yaga’s help, they might be able to take our GOLDEN APPLE OF DISCORD too. Use this special SKÜLLBOX DLC to put the trick into trick-or-treat!\n\nContains:\n\n- 4 new boxes, like the curs’d Anubox and the violently fun Box o’ Chainsaws!\n- 4 new monsters, one from each category.\n- A new boss: BABA YAGA!\n\n**NOTE**: This is an optional downloadable content for the SKÜLLBOX game, the full game, which includes the rules, can be downloaded here: [https://shardstone.itch.io/skullbox](https://shardstone.itch.io/skullbox),",
+      "buttons": [
+        {
+          "text": "FREE DOWNLOAD",
+          "url": "https://shardstone.itch.io/skullboxdlc"
+        }
+      ],
+      "gallery": [
+        {
+          "image": "/assets/images/skulldlc_screen1.jpg"
+        },
+        {
+          "image": "/assets/images/skulldlc_screen2.jpg"
+        }
+      ]
+    }
+  ],
   "buy_text": "Buy Now",
   "buy_url": "https://shardstone.itch.io/skullbox"
 }
