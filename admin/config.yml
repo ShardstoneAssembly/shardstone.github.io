@@ -66,40 +66,102 @@ collections:
         file: "_data/scavenger.json"
         format: "json"
         fields:
-          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen image shown when you land on this page" }
-          - { label: "Product Title", name: "title", widget: "string", default: "Scavenger" }
+          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen fixed background image for this page" }
+          - { label: "Product Title (text)", name: "title", widget: "string", default: "Scavenger" }
+          - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false, hint: "Upload a logo image to replace the text title. Leave empty to use text." }
           - { label: "Subtitle", name: "subtitle", widget: "string", default: "Nomads of Uncharted Worlds" }
-          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the heading, e.g. Campaign Sourcebook · D&D 5E", default: "Campaign Sourcebook · D&D 5E" }
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the description", default: "Campaign Sourcebook · D&D 5E" }
           - { label: "Product Cover Image", name: "cover_image", widget: "image" }
-          - { label: "Description", name: "description", widget: "markdown", hint: "Supports bold, italic, links, and paragraphs" }
-          - { label: "Buy Button Text", name: "buy_text", widget: "string", default: "Buy Now" }
-          - { label: "Buy Button URL", name: "buy_url", widget: "string", default: "https://shardstone.itch.io/scavenger" }
+          - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false, hint: "Optional — URL to open when clicking the cover image (e.g. your itch.io page)" }
+          - { label: "Description", name: "description", widget: "markdown" }
+          - label: "Buttons"
+            name: "buttons"
+            widget: "list"
+            hint: "Add up to 3 buttons. These replace the old single Buy Now button."
+            fields:
+              - { label: "Button Text", name: "text", widget: "string", hint: "e.g. Buy Now, Kickstarter, Free Preview" }
+              - { label: "Button URL", name: "url", widget: "string" }
           - label: "Screenshot Gallery"
             name: "gallery"
             widget: "list"
-            hint: "Images shown in the grid below the description"
+            hint: "Images shown in the grid below. Click to enlarge on the live site."
             fields:
               - { label: "Image", name: "image", widget: "image" }
+          - label: "Additional Products"
+            name: "extra_products"
+            widget: "list"
+            required: false
+            hint: "Add more products below the main one on this page"
+            fields:
+              - { label: "Product Title (text)", name: "title", widget: "string" }
+              - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false, hint: "Upload a logo image to replace the text title" }
+              - { label: "Eyebrow Text", name: "eyebrow", widget: "string", required: false }
+              - { label: "Product Cover Image", name: "cover_image", widget: "image" }
+              - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - { label: "Button URL", name: "url", widget: "string" }
+              - label: "Screenshot Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
 
       - name: "skullbox"
         label: "Skullbox Page"
         file: "_data/skullbox.json"
         format: "json"
         fields:
-          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen image shown when you land on this page" }
-          - { label: "Product Title", name: "title", widget: "string", default: "Skullbox" }
+          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen fixed background image for this page" }
+          - { label: "Product Title (text)", name: "title", widget: "string", default: "Skullbox" }
+          - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false, hint: "Upload a logo image to replace the text title. Leave empty to use text." }
           - { label: "Subtitle", name: "subtitle", widget: "string", default: "Dungeons · Mayhem · Magyk" }
-          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the heading", default: "Rules-Lite Zine · 6-sided dice only" }
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", default: "Rules-Lite Zine · 6-sided Dice Only" }
           - { label: "Product Cover Image", name: "cover_image", widget: "image" }
-          - { label: "Description", name: "description", widget: "markdown", hint: "Supports bold, italic, links, and paragraphs" }
-          - { label: "Buy Button Text", name: "buy_text", widget: "string", default: "Buy Now" }
-          - { label: "Buy Button URL", name: "buy_url", widget: "string", default: "https://shardstone.itch.io/skullbox" }
+          - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false, hint: "Optional — URL to open when clicking the cover image" }
+          - { label: "Description", name: "description", widget: "markdown" }
+          - label: "Buttons"
+            name: "buttons"
+            widget: "list"
+            hint: "Add up to 3 buttons. These replace the old single Buy Now button."
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "Button URL", name: "url", widget: "string" }
           - label: "Screenshot Gallery"
             name: "gallery"
             widget: "list"
-            hint: "Images shown in the grid below the description"
+            hint: "Images shown in the grid below. Click to enlarge on the live site."
             fields:
               - { label: "Image", name: "image", widget: "image" }
+          - label: "Additional Products"
+            name: "extra_products"
+            widget: "list"
+            required: false
+            hint: "Add more products below the main one on this page"
+            fields:
+              - { label: "Product Title (text)", name: "title", widget: "string" }
+              - { label: "Title Logo Image", name: "title_logo", widget: "image", required: false }
+              - { label: "Eyebrow Text", name: "eyebrow", widget: "string", required: false }
+              - { label: "Product Cover Image", name: "cover_image", widget: "image" }
+              - { label: "Cover Image Link", name: "cover_link", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - { label: "Button URL", name: "url", widget: "string" }
+              - label: "Screenshot Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
 
   # ─── ABOUT PAGE ──────────────────────────────────────────────────────────────
 
