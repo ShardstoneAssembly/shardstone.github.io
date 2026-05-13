@@ -11,8 +11,16 @@
   "text_color": "",
   "buttons": [
     {
-      "text": "BUY NOW",
+      "text": "ITCH.IO",
       "url": "https://shardstone.itch.io/skullbox"
+    },
+    {
+      "text": "DRIVETHRURPG",
+      "url": "https://www.drivethrurpg.com/en/product/348544/skuellbox-1?src=hottest_filtered"
+    },
+    {
+      "text": "PRINTS",
+      "url": "https://www.inprnt.com/gallery/shardstone/"
     }
   ],
   "gallery": [
@@ -53,6 +61,6 @@
       ]
     }
   ],
-  "buy_text": "Buy Now",
-  "buy_url": "https://shardstone.itch.io/skullbox"
+  "buy_url": "https://shardstone.itch.io/skullbox",
+  "buy_text": "Buy Now"
 }
