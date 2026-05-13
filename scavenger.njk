@@ -18,7 +18,7 @@ title: Scavenger — Shardstone Assembly
 
   <div class="product-page-body">
 
-    <section class="product-entry">
+    <section class="product-entry" {% if scavenger.text_color %}style="color: {{ scavenger.text_color }}"{% endif %}>
       <div class="product-entry-inner">
         <div class="product-text">
           {% if scavenger.eyebrow %}<p class="eyebrow">{{ scavenger.eyebrow }}</p>{% endif %}
