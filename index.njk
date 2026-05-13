@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Shardstone Assembly
+---
+<main
+  class="landing"
+  style="{% if general.landing_bg %}background-image: url('{{ general.landing_bg }}');{% endif %}"
+>
+  <div class="landing-inner">
+    <img src="/assets/images/logo.png" alt="Shardstone Assembly" class="landing-logo">
+    {% if general.tagline %}
+    <p class="landing-tagline">{{ general.tagline }}</p>
+    {% endif %}
+  </div>
+</main>

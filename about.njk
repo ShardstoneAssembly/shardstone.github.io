@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: About — Shardstone Assembly
+---
+
+<main class="about-page">
+
+  <section class="about-intro">
+    <div class="about-intro-inner">
+      {% if about.heading %}
+      <h1 class="about-heading">{{ about.heading }}</h1>
+      {% endif %}
+      {% if about.intro %}
+      <div class="about-intro-text rich-text">
+        {{ about.intro | markdown | safe }}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if about.members and about.members.length %}
+  <section class="about-team">
+    <div class="about-team-inner">
+      {% for member in about.members %}
+      <div class="member-card">
+        {% if member.portrait %}
+        <div class="member-portrait">
+          <img src="{{ member.portrait }}" alt="{{ member.name }}">
+        </div>
+        {% endif %}
+        <div class="member-info">
+          <h2 class="member-name">{{ member.name }}</h2>
+          {% if member.bio %}
+          <div class="member-bio rich-text">
+            {{ member.bio | markdown | safe }}
+          </div>
+          {% endif %}
+          {% if member.socials and member.socials.length %}
+          <div class="member-socials">
+            {% for social in member.socials %}
+            <a href="{{ social.url }}" class="member-social-link" target="_blank" rel="noopener noreferrer">
+              {{ social.label }}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</main>

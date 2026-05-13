@@ -1,0 +1,38 @@
+---
+layout: base.njk
+---
+<main class="post-page">
+
+  {% if thumbnail %}
+  <div class="post-hero" style="background-image: url('{{ thumbnail }}')"></div>
+  {% endif %}
+
+  <article class="post-content">
+    <header class="post-header">
+      <time class="post-date">{{ date | dateDisplay }}</time>
+      <h1 class="post-title">{{ title }}</h1>
+    </header>
+
+    <div class="post-body rich-text">
+      {{ content | safe }}
+    </div>
+
+    {% if images and images.length %}
+    <div class="post-images">
+      {% for item in images %}
+      <figure class="post-figure">
+        <img src="{{ item.image }}" alt="{{ item.caption if item.caption else '' }}">
+        {% if item.caption %}
+        <figcaption>{{ item.caption }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="post-back">
+      <a href="/journal/" class="back-link">← Back to Journal</a>
+    </div>
+  </article>
+
+</main>

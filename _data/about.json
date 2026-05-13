@@ -1,0 +1,18 @@
+{
+  "heading": "The Shardstone Core.",
+  "intro": "We are an independent publisher of storytelling games and fantastical worlds designed to push the boundaries of imagination.\n\n**Quality.** Every product we put out, be it digital or physical, will be high in quality and something you can be proud of having.\n\n**Story.** When designing our games, we always ensure to create tools that craft exciting and fresh stories.\n\n**Diversity.** Our products are for everyone, and representation can be found both in our creative team and in our games.",
+  "members": [
+    {
+      "name": "Andi",
+      "portrait": "/assets/images/andi-portrait.jpg",
+      "bio": "Bio coming soon.",
+      "socials": []
+    },
+    {
+      "name": "Marquis",
+      "portrait": "/assets/images/marquis-portrait.jpg",
+      "bio": "Bio coming soon.",
+      "socials": []
+    }
+  ]
+}

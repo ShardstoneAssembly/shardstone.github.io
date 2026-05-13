@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Scavenger — Shardstone Assembly
+---
+
+<main class="product-page">
+
+  <!-- Full-screen hero with background art -->
+  <section
+    class="product-hero"
+    style="{% if scavenger.hero_bg %}background-image: url('{{ scavenger.hero_bg }}');{% endif %}"
+  >
+    <div class="product-hero-content">
+      <h1 class="product-title">{{ scavenger.title }}</h1>
+      {% if scavenger.subtitle %}
+      <p class="product-subtitle">{{ scavenger.subtitle }}</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Description + cover image -->
+  <section class="product-content">
+    <div class="product-content-inner">
+
+      <div class="product-text">
+        {% if scavenger.eyebrow %}
+        <p class="eyebrow">{{ scavenger.eyebrow }}</p>
+        {% endif %}
+        <div class="rich-text">
+          {{ scavenger.description | markdown | safe }}
+        </div>
+        {% if scavenger.buy_url %}
+        <a href="{{ scavenger.buy_url }}" class="btn" target="_blank" rel="noopener noreferrer">
+          {{ scavenger.buy_text if scavenger.buy_text else "Buy Now" }}
+        </a>
+        {% endif %}
+      </div>
+
+      {% if scavenger.cover_image %}
+      <div class="product-cover">
+        <img src="{{ scavenger.cover_image }}" alt="{{ scavenger.title }}">
+      </div>
+      {% endif %}
+
+    </div>
+  </section>
+
+  <!-- Screenshot gallery -->
+  {% if scavenger.gallery and scavenger.gallery.length %}
+  <section class="gallery">
+    <div class="gallery-grid">
+      {% for item in scavenger.gallery %}
+      <div class="gallery-item">
+        <img src="{{ item.image }}" alt="Scavenger screenshot">
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</main>

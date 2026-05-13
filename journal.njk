@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Journal — Shardstone Assembly
+permalink: /journal/index.html
+---
+
+<main class="journal-page">
+
+  <section class="journal-list">
+    <div class="journal-inner">
+
+      <header class="journal-header">
+        <h1 class="journal-heading">Journal</h1>
+      </header>
+
+      {% if collections.posts and collections.posts.length %}
+        {% for post in collections.posts %}
+        <article class="journal-entry">
+          <a href="{{ post.url }}" class="journal-entry-link">
+            {% if post.data.thumbnail %}
+            <div class="j-thumb">
+              <img src="{{ post.data.thumbnail }}" alt="">
+            </div>
+            {% else %}
+            <div class="j-thumb j-thumb--empty"></div>
+            {% endif %}
+            <div class="j-info">
+              <time class="j-date">{{ post.date | dateDisplay }}</time>
+              <h2 class="j-title">{{ post.data.title }}</h2>
+            </div>
+            <span class="j-arrow">→</span>
+          </a>
+        </article>
+        {% endfor %}
+      {% else %}
+        <p class="journal-empty">No posts yet — check back soon.</p>
+      {% endif %}
+
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,14 @@
+{
+  "nav_items": [
+    { "label": "Scavenger", "url": "/scavenger/" },
+    { "label": "Skullbox", "url": "/skullbox/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Journal", "url": "/journal/" }
+  ],
+  "social_links": [
+    { "platform": "instagram", "url": "https://instagram.com/shardstonegames" },
+    { "platform": "youtube", "url": "https://youtube.com/@shardstonegames" },
+    { "platform": "discord", "url": "https://discord.gg/shardstone" },
+    { "platform": "itchio", "url": "https://shardstone.itch.io" }
+  ]
+}

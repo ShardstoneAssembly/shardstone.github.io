@@ -9,11 +9,141 @@ media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "portfolio"
-    label: "Portfolio Projects"
-    folder: "content/portfolio"
+
+  # ─── SETTINGS ────────────────────────────────────────────────────────────────
+
+  - name: "settings"
+    label: "Settings"
+    files:
+
+      - name: "general"
+        label: "Landing Page"
+        file: "_data/general.json"
+        format: "json"
+        fields:
+          - { label: "Tagline", name: "tagline", widget: "string", hint: "Short line shown under the logo on the landing page" }
+          - { label: "Landing Background Image", name: "landing_bg", widget: "image", hint: "Full-screen image behind the logo" }
+
+      - name: "navigation"
+        label: "Navigation & Social Links"
+        file: "_data/navigation.json"
+        format: "json"
+        fields:
+          - label: "Navigation Items"
+            name: "nav_items"
+            widget: "list"
+            hint: "Pages shown in the top menu — you can reorder, add, or remove"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "e.g. /scavenger/ or /journal/" }
+          - label: "Social Links"
+            name: "social_links"
+            widget: "list"
+            hint: "Icons shown on the right side of the nav — add or remove as needed"
+            fields:
+              - label: "Platform"
+                name: "platform"
+                widget: "select"
+                options:
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "BlueSky", value: "bluesky" }
+                  - { label: "Facebook", value: "facebook" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "Discord", value: "discord" }
+                  - { label: "Itch.io", value: "itchio" }
+                  - { label: "Twitter / X", value: "twitter" }
+              - { label: "URL", name: "url", widget: "string" }
+
+  # ─── PRODUCT PAGES ───────────────────────────────────────────────────────────
+
+  - name: "products"
+    label: "Products"
+    files:
+
+      - name: "scavenger"
+        label: "Scavenger Page"
+        file: "_data/scavenger.json"
+        format: "json"
+        fields:
+          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen image shown when you land on this page" }
+          - { label: "Product Title", name: "title", widget: "string", default: "Scavenger" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", default: "Nomads of Uncharted Worlds" }
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the heading, e.g. Campaign Sourcebook · D&D 5E", default: "Campaign Sourcebook · D&D 5E" }
+          - { label: "Product Cover Image", name: "cover_image", widget: "image" }
+          - { label: "Description", name: "description", widget: "markdown", hint: "Supports bold, italic, links, and paragraphs" }
+          - { label: "Buy Button Text", name: "buy_text", widget: "string", default: "Buy Now" }
+          - { label: "Buy Button URL", name: "buy_url", widget: "string", default: "https://shardstone.itch.io/scavenger" }
+          - label: "Screenshot Gallery"
+            name: "gallery"
+            widget: "list"
+            hint: "Images shown in the grid below the description"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+      - name: "skullbox"
+        label: "Skullbox Page"
+        file: "_data/skullbox.json"
+        format: "json"
+        fields:
+          - { label: "Hero Background Image", name: "hero_bg", widget: "image", hint: "Full-screen image shown when you land on this page" }
+          - { label: "Product Title", name: "title", widget: "string", default: "Skullbox" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", default: "Dungeons · Mayhem · Magyk" }
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small label above the heading", default: "Rules-Lite Zine · 6-sided dice only" }
+          - { label: "Product Cover Image", name: "cover_image", widget: "image" }
+          - { label: "Description", name: "description", widget: "markdown", hint: "Supports bold, italic, links, and paragraphs" }
+          - { label: "Buy Button Text", name: "buy_text", widget: "string", default: "Buy Now" }
+          - { label: "Buy Button URL", name: "buy_url", widget: "string", default: "https://shardstone.itch.io/skullbox" }
+          - label: "Screenshot Gallery"
+            name: "gallery"
+            widget: "list"
+            hint: "Images shown in the grid below the description"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+  # ─── ABOUT PAGE ──────────────────────────────────────────────────────────────
+
+  - name: "about_page"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About"
+        file: "_data/about.json"
+        format: "json"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string", default: "The Shardstone Core." }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
+          - label: "Team Members"
+            name: "members"
+            widget: "list"
+            hint: "Add both co-creators here"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Portrait Photo", name: "portrait", widget: "image" }
+              - { label: "Bio", name: "bio", widget: "markdown" }
+              - label: "Personal Social Links"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - { label: "Label (e.g. Instagram)", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+  # ─── JOURNAL ─────────────────────────────────────────────────────────────────
+
+  - name: "journal"
+    label: "Journal"
+    folder: "journal"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Thumbnail Image", name: "thumbnail", widget: "image", hint: "Small image shown on the journal list" }
+      - { label: "Content", name: "body", widget: "markdown", hint: "Main text of the post — supports rich text and links" }
+      - label: "Additional Images"
+        name: "images"
+        widget: "list"
+        required: false
+        hint: "Extra images shown at the bottom of the post"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
