@@ -18,7 +18,7 @@ title: Skullbox — Shardstone Assembly
 
   <div class="product-page-body">
 
-    <section class="product-entry">
+    <section class="product-entry" {% if skullbox.text_color %}style="color: {{ skullbox.text_color }}"{% endif %}>
       <div class="product-entry-inner">
         <div class="product-text">
           {% if skullbox.eyebrow %}<p class="eyebrow">{{ skullbox.eyebrow }}</p>{% endif %}
