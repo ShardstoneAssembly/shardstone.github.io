@@ -59,6 +59,34 @@
           "image": "/assets/images/skulldlc_screen2.jpg"
         }
       ]
+    },
+    {
+      "title": "Kickstarter rewards",
+      "title_logo": "",
+      "eyebrow": "",
+      "cover_image": "/assets/images/PXL_20211101_115441807.PORTRAIT.jpg",
+      "cover_link": "",
+      "description": "The Kickster physical edition came with a few other goodies.",
+      "buttons": [
+        {
+          "text": "SOLD OUT",
+          "url": "https://www.kickstarter.com/projects/scavenger/skullbox-dungeon-mayhem-magyk-ttrpg-zine"
+        }
+      ],
+      "gallery": [
+        {
+          "image": "/assets/images/PXL_20211101_115506320.PORTRAIT.jpg"
+        },
+        {
+          "image": "/assets/images/PXL_20211101_115824857.jpg"
+        },
+        {
+          "image": "/assets/images/PXL_20211101_115644938.PORTRAIT.jpg"
+        },
+        {
+          "image": "/assets/images/PXL_20211101_115257265.PORTRAIT.jpg"
+        }
+      ]
     }
   ],
   "buy_url": "https://shardstone.itch.io/skullbox",
